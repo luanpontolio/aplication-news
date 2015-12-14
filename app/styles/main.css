@@ -8,7 +8,65 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 */
 
 body {
-  background: #fafafa;
+  background: #eee;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
+}
+.main-panel {
+  background-color: #eee;
+}
+
+/*paper-toolbar {
+  background-color: #42A5F5;
+}*/
+
+.list {
+  padding: 0;
+  border-right: 1px solid #eee;
+}
+
+.list paper-item {
+  height: 60px;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+paper-item paper-item-body a{
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  min-height: inherit;
+  text-decoration: none;
+  padding: 4px 16px;
+}
+.nav.page-element {
+  display: block;
+  margin-top: 8px;
+  fill-opacity: 0.5;
+}
+paper-item iron-icon {
+  height: 18px;
+  margin-right: 8px;
+  width: 18px;
+}
+
+.main-panel[mode=cover] .content {
+  padding: 0 64px 0 4px;
+}
+
+.main-panel {
+  --paper-header-panel-cover-container: {
+    left: 64px;
+  };
+}
+
+paper-material {
+  height: 1400px;
+  background-color: #fff;
+}
+
+.main-panel[mode=cover] paper-material {
+  max-width: 800px;
+  margin: 100px auto;
 }

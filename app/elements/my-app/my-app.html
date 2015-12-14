@@ -1,0 +1,122 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="my-app">
+  <template>
+    <link rel="stylesheet" type="text/css" href="../styles/main.css">
+
+    <paper-drawer-panel id="drawerPanel" responsive-width="1024px" drawer-width="{{drawerWidth}}">
+
+      <paper-header-panel class="list-panel" drawer mode="seamed">
+
+        <!-- List Toolbar -->
+        <paper-toolbar class$="{{toolbarClass}}">
+          <h1>My Perfil</h1>
+        </paper-toolbar>
+
+        <!-- List -->
+        <paper-menu class="list" on-iron-activate="_listTap">
+          <paper-item>
+            <iron-icon icon="inbox"></iron-icon>
+            <paper-item-body two-line class="nav">
+              <div title="Inbox" class="page-element"><a href="#">Inbox</a></div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item>
+            <iron-icon icon="star"></iron-icon>
+            <paper-item-body two-line class="nav">
+              <div title="Starred" class="page-element"><a href="#">Starred</a></div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item >
+            <iron-icon icon="tag"></iron-icon>
+            <paper-item-body two-line class="nav">
+              <div title="Important" class="page-element"><a href="#">Important</a></div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item>
+            <iron-icon icon="news"></iron-icon>
+            <paper-item-body two-line>
+              <div title="Send Mail"><a href="#">Send Mail</a></div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item>
+            <iron-icon icon="drafts"></iron-icon>
+            <paper-item-body two-line>
+              <div title="Drafts"><a href="#">Drafts</a></div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item>
+            <iron-icon icon="report"></iron-icon>
+            <paper-item-body two-line>
+              <div title="Span"><a href="#">Span</a></div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item>
+            <iron-icon icon="settings"></iron-icon>
+            <paper-item-body two-line>
+              <div title="Configuration"><a href="#">Configuration</a></div>
+            </paper-item-body>
+          </paper-item>
+        </paper-menu>
+
+      </paper-header-panel>
+
+      <paper-header-panel class="main-panel" main mode="{{mainMode}}">
+
+        <!-- Main Toolbar -->
+        <paper-toolbar class$="{{toolbarClass}}">
+          <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+        </paper-toolbar>
+
+        <div class="content">
+
+          <paper-material>
+            <!-- Card Content -->
+          </paper-material>
+
+        </div>
+
+      </paper-header-panel>
+
+    </paper-drawer-panel>
+
+    <iron-media-query query="(max-width: 780px)" query-matches="{{_isMobile}}"></iron-media-query>
+
+    <paper-toast id="caching-complete"
+                 duration="6000"
+                 text="Caching complete! This app will work offline.">
+    </paper-toast>
+
+    <platinum-sw-register auto-register
+                          clients-claim
+                          skip-waiting
+                          on-service-worker-installed="displayInstalledToast">
+      <platinum-sw-cache default-cache-strategy="fastest"
+                         cache-config-file="cache-config.json">
+      </platinum-sw-cache>
+    </platinum-sw-register>
+
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-app',
+      properties: {
+        _isMobile: {
+          type: Boolean,
+          observer: '_isMobileChanged'
+        }
+      },
+      _listTap: function() {
+        this.$.drawerPanel.closeDrawer();
+      },
+      _isMobileChanged: function(isMobile) {
+        this.mainMode = isMobile ? 'seamed' : 'cover';
+        this.drawerWidth = isMobile ? '100%' : '320px';
+        this.toolbarClass = isMobile ? '' : 'tall';
+        this.updateStyles();
+      }
+    });
+  </script>
+
+</dom-module>
