@@ -12,43 +12,59 @@ body {
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
 }
+ paper-menu-button {
+  margin: auto;
+}
+
+iron-image {
+  padding: 1em;
+}
+
+.item {
+  max-width: 300px;
+}
+
 .main-panel {
   background-color: #eee;
 }
 
-/*paper-toolbar {
-  background-color: #42A5F5;
-}*/
+#mainPanel{
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+              0 1px 5px 0 rgba(0, 0, 0, 0.12),
+              0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
 
 .list {
   padding: 0;
-  border-right: 1px solid #eee;
 }
 
 .list paper-item {
   height: 60px;
-  border-bottom: 1px solid #eee;
   background-color: #fff;
+  cursor: pointer;
+  color: #727272;
 }
 
 paper-item paper-item-body a{
-  cursor: pointer;
   display: block;
   font-size: 14px;
   font-weight: 400;
   min-height: inherit;
   text-decoration: none;
+  color: #212121;
   padding: 4px 16px;
 }
+
 .nav.page-element {
   display: block;
   margin-top: 8px;
   fill-opacity: 0.5;
 }
+
 paper-item iron-icon {
-  height: 18px;
+  height: 10px;
   margin-right: 8px;
-  width: 18px;
+  width: 10px;
 }
 
 .main-panel[mode=cover] .content {
@@ -62,11 +78,23 @@ paper-item iron-icon {
 }
 
 paper-material {
-  height: 1400px;
+  /*height: 1400px;*/
   background-color: #fff;
+}
+paper-material.card{
+  height: 1400px;
+}
+.action-menu paper-icon-button{
+  z-index: 99999;
 }
 
 .main-panel[mode=cover] paper-material {
-  max-width: 800px;
-  margin: 100px auto;
+  max-width: 750px;
+  margin: 150px auto;
+}
+
+.demo-avatar {
+  border-radius: 24px;
+  height: 48px;
+  width: 48px;
 }
