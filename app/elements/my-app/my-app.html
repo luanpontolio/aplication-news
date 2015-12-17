@@ -2,8 +2,8 @@
 
 <dom-module id="my-app">
   <template>
-    <link rel="stylesheet" type="text/css" href="../../styles/material.min.css">
-    <link rel="stylesheet" type="text/css" href="../../styles/main.css">
+<!--     <link rel="stylesheet" type="text/css" href="../../styles/material.min.css">
+ -->    <link rel="stylesheet" type="text/css" href="../../styles/main.css">
 
     <paper-drawer-panel id="drawerPanel" responsive-width="1024px" drawer-width="{{drawerWidth}}">
 
@@ -13,7 +13,7 @@
         <paper-toolbar class$="{{toolbarClass}}">
           <img src="../../images/user.jpg" class="bottom demo-avatar">
           <div class="bottom">
-            <span class="title">My name</span>
+            <span class="title">&nbsp;&nbsp;My name</span>
             <paper-menu-button class="bottom">
               <paper-icon-button
                                 icon="arrow-drop-down"
@@ -81,12 +81,12 @@
 
         <!-- Main Toolbar -->
         <paper-toolbar class$="{{toolbarClass}}">
-          <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+          <paper-icon-button id="icon-menu" icon="menu" paper-drawer-toggle></paper-icon-button>
           <span class="title">Title</span>
           <div class="action-menu">
             <paper-input label="text input"></paper-input>
-            <paper-icon-button icon="refresh" tabindex="0"></paper-icon-button>
-            <paper-icon-button icon="more-vert" tabindex="0"></paper-icon-button>
+            <paper-icon-button id="icon-refresh" icon="refresh" tabindex="0"></paper-icon-button>
+            <paper-icon-button id="icon-more-vert" icon="more-vert" tabindex="0"></paper-icon-button>
           </div>
         </paper-toolbar>
 

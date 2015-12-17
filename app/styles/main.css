@@ -12,12 +12,18 @@ body {
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
 }
+
  paper-menu-button {
   margin: auto;
 }
 
-iron-image {
-  padding: 1em;
+#topBar.paper-toolbar {
+  position: relative;
+  z-index: 100;
+}
+.list-panel{
+  position: relative;
+  z-index: 2;
 }
 
 .item {
@@ -69,6 +75,7 @@ paper-item iron-icon {
 
 .main-panel[mode=cover] .content {
   padding: 0 64px 0 4px;
+   margin: -16px -96px -16px -60px;
 }
 
 .main-panel {
@@ -77,19 +84,13 @@ paper-item iron-icon {
   };
 }
 
-paper-material {
-  /*height: 1400px;*/
-  background-color: #fff;
-}
 paper-material.card{
   height: 1400px;
-}
-.action-menu paper-icon-button{
-  z-index: 99999;
+  background-color: #fff;
 }
 
 .main-panel[mode=cover] paper-material {
-  max-width: 750px;
+  max-width: 640px;
   margin: 150px auto;
 }
 
@@ -98,3 +99,11 @@ paper-material.card{
   height: 48px;
   width: 48px;
 }
+
+@media (min-width: 600px){
+  #topBar{
+    position: relative;
+    z-index: 2
+  }
+}
+
