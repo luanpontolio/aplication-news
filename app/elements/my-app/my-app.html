@@ -2,15 +2,15 @@
 
 <dom-module id="my-app">
   <template>
-<!--     <link rel="stylesheet" type="text/css" href="../../styles/material.min.css">
- -->    <link rel="stylesheet" type="text/css" href="../../styles/main.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../styles/material.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../styles/main.css">
 
     <paper-drawer-panel id="drawerPanel" responsive-width="1024px" drawer-width="{{drawerWidth}}">
 
       <paper-header-panel class="list-panel" drawer mode="seamed">
 
         <!-- List Toolbar -->
-        <paper-toolbar class$="{{toolbarClass}}">
+        <paper-toolbar id="barAvatar" class$="{{toolbarClass}}">
           <img src="../../images/user.jpg" class="bottom demo-avatar">
           <div class="bottom">
             <span class="title">&nbsp;&nbsp;My name</span>
@@ -85,8 +85,8 @@
           <span class="title">Title</span>
           <div class="action-menu">
             <paper-input label="text input"></paper-input>
-            <paper-icon-button id="icon-refresh" icon="refresh" tabindex="0"></paper-icon-button>
-            <paper-icon-button id="icon-more-vert" icon="more-vert" tabindex="0"></paper-icon-button>
+            <paper-icon-button id="icon-refresh" icon="refresh" tabindex="1"></paper-icon-button>
+            <paper-icon-button id="icon-more-vert" icon="more-vert" tabindex="1"></paper-icon-button>
           </div>
         </paper-toolbar>
 
@@ -134,7 +134,7 @@
       },
       _isMobileChanged: function(isMobile) {
         this.mainMode = isMobile ? 'seamed' : 'cover';
-        this.drawerWidth = isMobile ? '80%' : '300px';
+        this.drawerWidth = isMobile ? '80%' : '320px';
         this.toolbarClass = isMobile ? '' : 'tall';
         this.updateStyles();
       }

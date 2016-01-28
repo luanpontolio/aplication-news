@@ -7,23 +7,15 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-body {
+:host {
+  display: block;
   background: #eee;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
 }
 
- paper-menu-button {
+paper-menu-button {
   margin: auto;
-}
-
-#topBar.paper-toolbar {
-  position: relative;
-  z-index: 100;
-}
-.list-panel{
-  position: relative;
-  z-index: 2;
 }
 
 .item {
@@ -55,7 +47,6 @@ paper-item paper-item-body a{
   display: block;
   font-size: 14px;
   font-weight: 400;
-  min-height: inherit;
   text-decoration: none;
   color: #212121;
   padding: 4px 16px;
@@ -74,13 +65,13 @@ paper-item iron-icon {
 }
 
 .main-panel[mode=cover] .content {
-  padding: 0 64px 0 4px;
-   margin: -16px -96px -16px -60px;
+  padding: 0 20px 0 4px;
+  /*margin: -16px -96px -16px -60px;*/
 }
 
 .main-panel {
   --paper-header-panel-cover-container: {
-    left: 64px;
+      left: 64px;
   };
 }
 
@@ -90,8 +81,8 @@ paper-material.card{
 }
 
 .main-panel[mode=cover] paper-material {
-  max-width: 640px;
-  margin: 150px auto;
+  max-width: 800px;
+  margin: 120px auto;
 }
 
 .demo-avatar {
@@ -99,11 +90,3 @@ paper-material.card{
   height: 48px;
   width: 48px;
 }
-
-@media (min-width: 600px){
-  #topBar{
-    position: relative;
-    z-index: 2
-  }
-}
-
