@@ -64,15 +64,14 @@ paper-item iron-icon {
   width: 10px;
 }
 
-.main-panel[mode=cover] .content {
-  padding: 0 20px 0 4px;
-  /*margin: -16px -96px -16px -60px;*/
-}
-
 .main-panel {
   --paper-header-panel-cover-container: {
-      left: 64px;
+    left: 64px;
   };
+}
+.main-panel[mode=cover] .content {
+  padding: 0 20px 0 4px;
+  margin: -16px -96px -16px -60px;
 }
 
 paper-material.card{
@@ -81,7 +80,7 @@ paper-material.card{
 }
 
 .main-panel[mode=cover] paper-material {
-  max-width: 800px;
+  max-width: 650px;
   margin: 120px auto;
 }
 
