@@ -40,7 +40,7 @@
           <paper-item>
             <iron-icon icon="star"></iron-icon>
             <paper-item-body two-line class="nav">
-              <div title="Starred" class="page-element"><a href="#">My Promotions</a></div>
+              <div title="Starred" class="page-element"><a href="#">My Animals</a></div>
             </paper-item-body>
           </paper-item>
           <paper-item >
@@ -88,12 +88,20 @@
             <paper-icon-button id="icon-refresh" icon="refresh" tabindex="1"></paper-icon-button>
             <paper-icon-button id="icon-more-vert" icon="more-vert" tabindex="1"></paper-icon-button>
           </div>
+
+
         </paper-toolbar>
+
 
         <div class="content">
 
           <paper-material class="card">
+            <paper-tabs selected="0"   noink>
+              <paper-tab>ITEM ONE</paper-tab>
+              <paper-tab>ITEM TWO</paper-tab>
+            </paper-tabs>
             <!-- Card Content -->
+            <card-list show="all"></card-list>
           </paper-material>
 
         </div>
