@@ -95,7 +95,7 @@ paper-material.card{
 }
 
 .demo-avatar {
-  border-radius: 24px;
-  height: 48px;
-  width: 48px;
+  border-radius: 64px;
+  height: 60px;
+  width: 60px;
 }
