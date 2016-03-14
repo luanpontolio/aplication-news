@@ -1,0 +1,28 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="my-paper-elements">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <style is="custom-style" include="paper-tabs-demo-styles"></style>
+    <paper-tabs selected="0" noink>
+      <paper-tab>
+        <paper-icon-button id="icon-refresh" icon="home" tabindex="1"></paper-icon-button>
+      </paper-tab>
+      <paper-tab>
+        <paper-icon-button id="icon-more-vert" icon="favorite" alt="My heart" tabindex="1"></paper-icon-button>
+      </paper-tab>
+    </paper-tabs>
+
+    <my-card-list show="all"></my-card-list>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'my-paper-elements'
+    });
+  </script>
+</dom-module>

@@ -2,20 +2,24 @@
   <template>
     <style>
       :root {
-        --paper-toolbar-background: var(--paper-blue-900);
+        --paper-toolbar-background: var(--paper-gray-900);
       }
 
       body {
-        font-family: sans-serif;
+        /*font-family: sans-serif;*/
         margin: 0;
         padding: 24px;
         color: #333;
       }
 
       paper-tabs, paper-toolbar {
-        background-color: var(--paper-blue-900);
-        color: #fff;
+        background-color: var(--paper-gray-900);
+        color: gray;
+        opacity: 0.9;
         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+        --paper-tabs-selection-bar-color: {
+          var(--paper-pink-500);
+        };
       }
 
       paper-toolbar paper-tabs {
@@ -31,7 +35,8 @@
       }
 
       paper-tabs a {
-        color: #fff;
+        color: gray;
+        opacity: 1;
       }
 
       h3 {

@@ -2,8 +2,8 @@
 
 <dom-module id="my-app">
   <template>
-    <!-- <link rel="stylesheet" type="text/css" href="../../styles/material.min.css"> -->
     <link rel="stylesheet" type="text/css" href="../../styles/main.css">
+    <link rel="import" href="../my-paper-elements/my-paper-elements.html">
 
     <paper-drawer-panel id="drawerPanel" responsive-width="1024px" drawer-width="{{drawerWidth}}">
 
@@ -96,12 +96,7 @@
         <div class="content">
 
           <paper-material class="card">
-            <paper-tabs selected="0"   noink>
-              <paper-tab>ITEM ONE</paper-tab>
-              <paper-tab>ITEM TWO</paper-tab>
-            </paper-tabs>
-            <!-- Card Content -->
-            <card-list show="all"></card-list>
+            <my-paper-elements></my-paper-elements>
           </paper-material>
 
         </div>
